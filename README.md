@@ -1,4 +1,7 @@
-# 会进化的智能家居客服
+#  ���进化的智能家居客服
+
+[![CI](https://github.com/w2637419628-glitch/smart-home-cs/actions/workflows/ci.yml/badge.svg)](https://github.com/w2637419628-glitch/smart-home-cs/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 > **Agent Loop + 示范学习 + 审核固化**：一套不用训练模型、越用越准的销售 Agent 后端。
 

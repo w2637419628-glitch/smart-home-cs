@@ -2,6 +2,15 @@
 
 [![CI](https://github.com/w2637419628-glitch/smart-home-cs/actions/workflows/ci.yml/badge.svg)](https://github.com/w2637419628-glitch/smart-home-cs/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Status: Demo](https://img.shields.io/badge/status-demo-orange)
+
+> ### ⚠️ 这是一个技术验证项目（Demo），不是生产系统
+>
+> - **业务数据是模拟的**：套餐 / 案例 / 话术全部为演示编造，不是真实门店数据
+> - **检索默认是词法匹配**（字符 bigram + IDF），不是向量检索 —— 见「已知限制」第 1 条
+> - **单机 SQLite、进程内会话、无鉴权**，不支持多 worker，不能直接用于生产
+>
+> 它要验证的是三件事：模型能否**自主调度工具**、能否**拒绝回答**、经验能否**自动沉淀**。
 
 > **Agent Loop + 示范学习 + 审核固化**：一套不用训练模型、越用越准的销售 Agent 后端。
 

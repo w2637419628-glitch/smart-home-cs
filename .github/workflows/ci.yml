@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 导入检查（不连模型也能过）
+        run: python -c "import app.main; print('import ok')"
+
+      - name: Agent Loop 护栏测试（离线，假模型）
+        run: python _test_guard.py

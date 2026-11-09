@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.git/
+.gitignore
+.env
+data.db
+*.db
+deploy/
+docs/
+_test_*.py
+_dev_test.py
+_smoke_test.py
+_probe_*.py
+_repro_*.py

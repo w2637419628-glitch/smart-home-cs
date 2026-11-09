@@ -1,0 +1,26 @@
+# 体验站用：对外 8080，容器内 8100
+# 交付版（挂 nginx）可改成：APP_BIND=127.0.0.1 APP_PORT=8100
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: smart-home-cs:latest
+    container_name: smart-home-cs
+    restart: unless-stopped
+    ports:
+      - "${APP_BIND:-0.0.0.0}:${APP_PORT:-8080}:8100"
+    env_file:
+      - ../.env
+    environment:
+      HOST: "0.0.0.0"
+      PORT: "8100"
+      DSH_DB_PATH: "/data/data.db"
+      TZ: Asia/Shanghai
+    volumes:
+      - ./data:/data
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

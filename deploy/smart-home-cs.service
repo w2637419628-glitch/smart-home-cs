@@ -1,0 +1,29 @@
+[Unit]
+Description=Smart Home CS Demo (Agent Loop + Self-evolution)
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/smart-home-cs
+EnvironmentFile=/opt/smart-home-cs/.env
+Environment=HOST=127.0.0.1
+Environment=PORT=8100
+Environment=DSH_DB_PATH=/opt/smart-home-cs/data/data.db
+Environment=TZ=Asia/Shanghai
+ExecStart=/opt/smart-home-cs/.venv/bin/python run.py
+Restart=always
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+
+# 基础加固
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/smart-home-cs
+
+[Install]
+WantedBy=multi-user.target

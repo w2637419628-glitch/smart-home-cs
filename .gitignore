@@ -1,0 +1,21 @@
+# 密钥不提交
+.env
+
+# 数据库（演示数据，启动时自动重建）
+data.db
+*.db
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 临时排查脚本（不是交付物）
+_probe_*.py
+_repro_*.py
+_fix_*.py
+
+# 系统
+.DS_Store
+Thumbs.db

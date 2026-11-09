@@ -1,4 +1,4 @@
-#  ���进化的智能家居客服
+# 会进化的智能家居客服
 
 [![CI](https://github.com/w2637419628-glitch/smart-home-cs/actions/workflows/ci.yml/badge.svg)](https://github.com/w2637419628-glitch/smart-home-cs/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
